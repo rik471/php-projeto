@@ -1,6 +1,4 @@
-
-<p><?php
-echo "<b>Hello World</b>";
-
+<?php
+  echo "<p><b>Hello World</b></p>";
 ?>
-</p>
+
