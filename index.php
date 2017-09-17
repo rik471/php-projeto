@@ -3,7 +3,7 @@
   $nome = "Pablo";
   echo "<b>Hello World</b>, Malparidos!</br>";
   var_dump($nome);
-  /*mostrandotipo de var*/
+  /*mostrando tipo de var*/
 ?>
 </p>
 
