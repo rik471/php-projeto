@@ -3,7 +3,7 @@
   $nome = "Pablo";
   echo "<b>Hello World</b>, Malparidos!</br>";
   var_dump($nome);
-  /*mostrando tipo de var*/
+  /*mostrandotipo de var*/
 ?>
 </p>
 
@@ -46,9 +46,26 @@
 
  <p>Ex 04 <br><?php
   //array super-globais
-    $nome = (int)$_GET["a"];//pega informação url
-    echo "$nome";
+  $nome = (int)$_GET["a"];//pega informação url
+  echo "$nome";
 
-    $ip = $_SERVER["REMOTE_ADDR"];
-    echo "</br>$ip";
+  //pegar ip user
+  $ip = $_SERVER["REMOTE_ADDR"];
+  echo "</br>$ip";
   ?></p>
+
+<p>Ex 05 <?php
+//variaveis globais
+  $nome = 'Rick';
+
+  function teste(){
+    global $nome;//definindo var global
+    echo "</br>". $nome. " primeira função</br>";
+  }
+  function teste2(){
+      global $nome;
+      echo $nome. " segundo teste, porra";
+  }
+  teste();
+  teste2();
+ ?></p>
