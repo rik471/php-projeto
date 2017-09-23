@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt_BR">
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
 
-<p><h1>Exemplo 13 <br><br></h1><?php
+<p><?php
+  setlocale(LC_ALL,"pt_BR.UTF-8" );
+  echo setlocale(LC_ALL, 0);
+
+ ?><h1>Exemplo 13 <br><br></h1><?php
  $nome = "Meu nome não é jhonny";
  //diferença entre aspas duplas e simples
  echo "variavel $nome normais<br>";
@@ -33,7 +37,7 @@
   echo "$nome";
 ?></p>
 
-<p><h1>Exemplo 15 <br><br></h1><?php
+<p><h1>Exemplo 16 <br><br></h1><?php
   $frase = "Tear up rules, make the most of a millions times no.";
 
   $ff = "the";
@@ -50,5 +54,13 @@ $f3 = substr($frase, $ff + strlen($f2)/*pos inicial*/, strlen($frase)/*pos parad
   var_dump($f."<br>");
 ?></p>
 
+<p style="width: 100%"><h1>Exemplo 17 <br><br></h1><?php
+  //include "include.php"; //include nao importa se o arq funciona, e ele busca o mesmo arq em um banco de dados se existir
+  //require "include.php"; //require apenas roda o arq se o mesmo funcionar corretamente
+  require_once "include.php"; //require_once chama apenas uma vez o arq no codigo, pra nao haver perigos de o mesmo ser solicitado duas vezes
+
+  $res = pares();
+  echo $res."&nbsp";
+?></p>
 </body>
 </html>
