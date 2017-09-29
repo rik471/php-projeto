@@ -81,5 +81,41 @@
         }
         echo '</select>';
       ?></p>
+      <p><h1>Busca por Índice</h1><?php
+        $mes = array("1","2","3","4","5","6","7","8","9");
+          foreach ($mes as $key => $num) {
+            echo "Indice $key:</br>";
+            echo "Número: $num</br>";
+          }
+      ?></p>
+      <form>
+        <input type="text" name="nome">
+        <input type="date" name="nasc">
+        <input type="submit" value="Go!">
+      </form>
+      <?php
+      if(isset($_GET)){
+
+          foreach ($_GET as $key => $nasc) {
+            echo "Campo: $key<br>Valor: $nasc<br>";
+            }
+        }
+      ?>
+      <p><h1>While and Do while</h1> <?php
+        $achou = true;
+        while ($achou) {
+          $contador = rand(1, 100);
+
+          if ($contador > 50 && $contador < 60) {
+            echo "Achou numero $contador !!!<br>";
+            $achou = false;
+          }
+        }
+        do {
+          $contador /= 10000;
+          echo "Quem é o gatão<br>";
+        } while ($contador > 50);
+        echo "$contador";
+      ?></p>
   </body>
 </html>
