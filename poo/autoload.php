@@ -5,6 +5,7 @@ public function incluir($nomeClasse){
   {
 
     var_dump("$nomeClasse.php");
+    //require_once("$nomeClasse.php");
 
   }else {
 
